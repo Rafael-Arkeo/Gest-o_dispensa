@@ -1,0 +1,12 @@
+.idea
+db.sqlite3
+.dist
+.pyc
+.media
+.vscode
+media
+venv
+/venv
+__pycache__
+db.sqlite3          # not needed if you're using Postgres locally
+gestao-produtos/static/
