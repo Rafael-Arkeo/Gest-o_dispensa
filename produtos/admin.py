@@ -1,3 +1,6 @@
 from django.contrib import admin
+from .models import Categoria,Produto
 
-# Register your models here.
+@admin.register(Produto)
+class ProdutoAdmin(admin.ModelAdmin):
+    list_display = ("categoria", "nome", "slug","qtd","criado","atualizado")
