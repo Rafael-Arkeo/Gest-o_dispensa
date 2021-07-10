@@ -16,19 +16,23 @@
     <table class="table   table-hover">
         <thead class="table-light">
             <tr>
-                {%for prod in prod_list%}
-                    <th scope="col" style="color:blue;">{{prod}}</th>
+                {%for iten in index%}
+                    <th scope="col" style="color:blue;">{{iten}}</th>
                 {%endfor%}
             </tr>
         </thead>
         <tbody>
         {%for prod in prod%}
             <tr>
-                <th scope="row">{{prod.nome}}</th>
+                <th scope="row" style="color:blue;">{{prod.nome}}</th>
                 <td>{{prod.categoria}}</td>
                 <td>{{prod.slug}}</td>
                 <td>{{prod.qtd}}</td>
-                <td>{{prod.disponivel}}</td>
+                {% if prod.disponivel%}
+                    <td style="color:green;">sim</td>
+                {%else%}
+                    <td style="color:red;">não</td>
+                {%endif%}
                 <td>{{prod.criado}}</td>
                 <td>{{prod.atualizado}}</td>
 

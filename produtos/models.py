@@ -18,7 +18,7 @@ class Categoria(models.Model):
 class Produto(models.Model):
     categoria = models.ForeignKey(Categoria, related_name="Produto", on_delete=models.CASCADE)
     nome = models.CharField(max_length=250, null=False, blank=False, unique=True,)
-    slug = AutoSlugField(unique=True, always_update=False, populate_from="nome")
+    slug = AutoSlugField(unique=True, always_update=True, populate_from="nome")
     qtd = models.PositiveIntegerField()
     disponivel = models.BooleanField(default=True)
     criado = models.DateTimeField(auto_now_add=True)
@@ -31,3 +31,5 @@ class Produto(models.Model):
 
     def __str__(self):
         return self.nome
+
+
