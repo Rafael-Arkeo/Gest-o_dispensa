@@ -1,9 +1,9 @@
 from django.contrib import admin
-from .models import Categoria,Produto
+from .models import Categoria, Produto
 
 @admin.register(Produto)
 class ProdutoAdmin(admin.ModelAdmin):
-    list_display = ("nome", "categoria", "slug","qtd","disponivel","criado","atualizado")
+    list_display = ("nome", "categoria", "slug", "qtd", "disponivel", "criado", "atualizado")
 
 
 @admin.register(Categoria)

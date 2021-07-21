@@ -4,7 +4,7 @@ from autoslug import AutoSlugField
 
 class Categoria(models.Model):
     nome = models.CharField(max_length=250, unique=True)
-    slug = AutoSlugField(unique=True, always_update=False, populate_from="nome")
+    slug = AutoSlugField(unique=True, always_update=True, populate_from="nome")
 
     class Meta:
         ordering = ("nome",)
