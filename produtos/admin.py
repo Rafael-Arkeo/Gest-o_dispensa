@@ -3,7 +3,7 @@ from .models import Categoria, Produto
 
 @admin.register(Produto)
 class ProdutoAdmin(admin.ModelAdmin):
-    list_display = ("nome", "categoria", "slug", "qtd", "disponivel", "criado", "atualizado")
+    list_display = ("nome", "categoria",  "qtd",  "criado", "atualizado")
 
 
 @admin.register(Categoria)
