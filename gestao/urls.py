@@ -18,10 +18,14 @@ import site
 from django.contrib import admin
 from django.urls import path, include
 from produtos.views import home
+import produtos.urls as produtos_urls
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', home)
+    path('', home, name='home'),
+    path('produtos/', include(produtos_urls)),
+
 
 
 ]

@@ -12,13 +12,16 @@
 
 </head>
 <body>
-<div class="container">
+<div class="container"style="padding:10px;">
     <h1>Gestão de Dispensa</h1>
 </div>
 
 
 <div class="container">
-    <div class="table-responsive">
+    <div class="container" style="padding-bottom:50px;">
+        <a href="{% url 'novo_prod' %}" class="btn btn-success">Novo Produto</a>
+    </div>
+        <div class="table-responsive">
         <table class="table table-hover">
             <thead class="table">
                 <tr>
@@ -37,8 +40,8 @@
 
                     <td>{{prod.criado}}</td>
                     <td>{{prod.atualizado}}</td>
-                    <td><a href="">Atualizar</a></td>
-                    <td><a href="">Deletar</a></td>
+                    <td><a href="" class="btn btn-primary">Atualizar</a></td>
+                    <td><a href="" class="btn btn-danger">Deletar</a></td>
 
 
                 </tr>
