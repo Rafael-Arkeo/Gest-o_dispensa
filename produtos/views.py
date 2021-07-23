@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from.models import Produto
 from .admin import ProdutoAdmin
 from .forms import ProdForms
@@ -20,3 +20,12 @@ def criar_novo_produto(request):
         """"Retorna para página home"""
     return render(request, 'novo_produto.html', {'form': form})
     """"Chama o template novo_produto"""
+
+
+def deletar_produto(request,id):
+    prod = get_object_or_404(Produto, pk=id)
+    form = ProdForms(request.POST, None, instance=prod)
+    if request.method == 'POST':
+        prod.delete()
+        return redirect('home')
+    return render(request, 'deletar_produto.html', {'prod': prod})
