@@ -40,7 +40,7 @@
 
                     <td>{{prod.criado}}</td>
                     <td>{{prod.atualizado}}</td>
-                    <td><a href="#" class="btn btn-primary">Atualizar</a></td>
+                    <td><a href="{% url 'atualizar' prod.id %}" class="btn btn-primary">Atualizar</a></td>
                     <td><a href="{% url 'del' prod.id %}" class="btn btn-danger">Deletar</a></td>
 
 

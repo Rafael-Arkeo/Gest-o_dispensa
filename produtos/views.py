@@ -10,7 +10,7 @@ def home(request):
 
 
 def criar_novo_produto(request):
-    form = ProdForms(request.POST, None)
+    form = ProdForms(request.POST or None)
     """"Cria formulário para cadastrar
             um novo produto"""
     if form.is_valid():
@@ -24,8 +24,17 @@ def criar_novo_produto(request):
 
 def deletar_produto(request,id):
     prod = get_object_or_404(Produto, pk=id)
-    form = ProdForms(request.POST, None, instance=prod)
+    form = ProdForms(request.POST or None, instance=prod)
     if request.method == 'POST':
         prod.delete()
         return redirect('home')
     return render(request, 'deletar_produto.html', {'prod': prod})
+
+
+def atualizar_produto(request, id):
+    prod = get_object_or_404(Produto, pk=id)
+    form = ProdForms(request.POST or None, instance=prod)
+    if form.is_valid():
+        form.save()
+        return redirect('home')
+    return render(request, 'atualizar_produto.html', {'form': form})

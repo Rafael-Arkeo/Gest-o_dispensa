@@ -10,7 +10,7 @@
     <title>Deletar Produto</title>
 </head>
 <body>
-<h3>Você tem  certeza que deseja deletar <a style="color: blue;">{{prod.nome}}</a>?</h3>
+<h3 style="color: red;">Você tem  certeza que deseja deletar <a style="color: blue;">{{prod.nome}}</a>?</h3>
     <form method="post">
         {% csrf_token%}
         <button type="submit" class="btn btn-danger">Sim</button> <a href="{% url 'home' %}"class="btn btn-primary" >Não</a>
