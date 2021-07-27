@@ -41,5 +41,6 @@ toml==0.10.2
 traitlets==5.0.5
 wcwidth==0.2.5
 gunicorn==20.0.4
+django-environ==0.4.5
 
 whitenoise==5.2.0
