@@ -19,12 +19,14 @@ from django.contrib import admin
 from django.urls import path, include
 from produtos.views import home
 import produtos.urls as produtos_urls
+import categorias.urls as categorias_urls
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', home, name='home'),
     path('produtos/', include(produtos_urls)),
+    path('categorias/', include(categorias_urls))
 
 
 

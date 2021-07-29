@@ -7,17 +7,14 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <title>Novo</title>
+    <title>Nova Categoria</title>
 </head>
 <body>
 <div class="container">
-    <h1 style="color: blue;">Novo Produto</h1>
+    <h1 style="color: blue;">Nova Categoria</h1>
 </div>
 <div class="container">
     <form method="Post">
-        <a href="{% url 'nova-categoria' %}"class="btn btn-success" >Criar Categoria</a>
-        <br>
-        <br>
         {% csrf_token %}
         {{ form|bootstrap }}
         <button type="submit" class="btn btn-primary">Criar</button>

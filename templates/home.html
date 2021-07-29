@@ -12,44 +12,62 @@
 
 </head>
 <body>
-<div class="container"style="padding:10px;">
-    <h1>Gestão de Dispensa</h1>
-</div>
+    <div class="container">
+        <h1>Gestão de Produtos</h1>
+         <div class="container">
+             <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <ul class="list-group list-group-horizontal">
+                    <li style="display: inline;">
+                        <a href="{% url 'list-categoria' %}">Categoria</a>
+                    </li>
 
+                </ul>
+
+
+            </nav>
+        </div>
+
+    </div>
+
+    <br>
+    <div class="container" >
+        <div class="container" >
+            <a href="{% url 'novo_prod' %}" class="btn btn-success">Novo Produto</a>
+
+        </div>
+    </div>
 
 <div class="container">
-    <div class="container" style="padding-bottom:50px;">
-        <a href="{% url 'novo_prod' %}" class="btn btn-success">Novo Produto</a>
-    </div>
-        <div class="table-responsive">
-        <table class="table table-hover">
-            <thead class="table">
-                <tr>
-                    {%for iten in index%}
-                        <th scope="col" >{{iten}}</th>
+    <div class="table-responsive">
+            <table class="table table-hover">
+                <thead class="table">
+                    <tr>
+                        {%for iten in index%}
+                            <th scope="col" >{{iten}}</th>
+                        {%endfor%}
+                    </tr>
+                </thead>
+
+                <tbody>
+                    {%for prod in prod%}
+                        <tr>
+                            <th scope="row" style="color:blue;">{{prod.nome}}</th>
+                            <td>{{prod.categoria}}</td>
+
+                            <td>{{prod.qtd}}</td>
+
+                            <td>{{prod.criado}}</td>
+                            <td>{{prod.atualizado}}</td>
+                            <td><a href="{% url 'atualizar' prod.id %}" class="btn btn-primary">Atualizar</a></td>
+                            <td><a href="{% url 'del' prod.id %}" class="btn btn-danger">Deletar</a></td>
+
+
+
+                        </tr>
+
                     {%endfor%}
-                </tr>
-            </thead>
-            <tbody>
-                {%for prod in prod%}
-                <tr>
-                    <th scope="row" style="color:blue;">{{prod.nome}}</th>
-                    <td>{{prod.categoria}}</td>
-
-                    <td>{{prod.qtd}}</td>
-
-                    <td>{{prod.criado}}</td>
-                    <td>{{prod.atualizado}}</td>
-                    <td><a href="{% url 'atualizar' prod.id %}" class="btn btn-primary">Atualizar</a></td>
-                    <td><a href="{% url 'del' prod.id %}" class="btn btn-danger">Deletar</a></td>
-
-
-
-                </tr>
-
-                {%endfor%}
-            </tbody>
-        </table>
+                </tbody>
+            </table>
     </div>
 </div>
 </body>
