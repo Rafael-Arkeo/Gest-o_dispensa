@@ -24,7 +24,10 @@
 
          <ul>
         {%for cat in cat%}
-        <li>{{cat.nome}}</li>
+            <li>
+                <a href="{% url 'atualizar-categoria' cat.id %}">{{cat.nome}}</a>
+                <a href="{% url 'deletar-categoria' cat.id %}" class="btn btn-danger">Deletar</a>
+            </li>
         {%endfor%}
 
     </ul>
