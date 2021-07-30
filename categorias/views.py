@@ -4,6 +4,7 @@ from .forms import CategoriaForm
 
 
 def list_categoria(request):
+    """Retorna lista de categorias"""
     cat = Categoria.objects.all()
     return render(request, 'lista-categoria.html', {'cat': cat})
 
@@ -13,5 +14,5 @@ def nova_categoria(request):
 
     if form.is_valid():
         form.save()
-        return redirect('home')
+        return redirect('novo_prod')
     return render(request, 'nova-categoria.html', {'form': form})
