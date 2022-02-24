@@ -13,7 +13,7 @@
 12. linux:  source gestao-env/bin/activate
 13. Se der tudo certo gestao-env vai aparecer agora no seu terminal para mostrar que seu ambiente virtual está ativado (gestao-env)
 ## Instalando as Bibliotecas necessárias
-11. No terminal na pasta raiz do projeto(aquela com o arquivo manage.py) digite pip install requirements.txt não se preocupe se todas as bibliotecas não forem instaladas
+11. No terminal na pasta raiz do projeto(aquela com o arquivo manage.py) digite pip install -r requirements.txt não se preocupe se todas as bibliotecas não forem instaladas
 12. Digite o comando pip freeze para ver quais bibliotecas foram instaladas
 ## Criando as Migrations
 14. Agora para fazer as migrações do banco de dados
