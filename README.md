@@ -27,10 +27,11 @@
 20. se der tudo certo essa msg deverá aparecer em seu terminal:
 Watching for file changes with StatReloader
 Performing system checks...
-
+###
 System check identified no issues (0 silenced).
 February 24, 2022 - 18:21:31
 Django version 3.1.3, using settings 'gestao.settings.base'
 Starting development server at http://127.0.0.1:8000/
 Quit the server with CTRL-BREAK.
+
 21. click no link para acessar a página inicial do app.
