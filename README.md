@@ -8,6 +8,7 @@
 ## Criando uma virtualenv
 8. Crie uma virtualenv.Para isso digite no terminal python3 -m venv gestao-env
 9. ative a venv.Para isso digite no terminal:
+10. no caso de seu sistema for windows: gestao-env\Scripts\activate.bat ou gestao-env/bin/activate. Se aparecer uma msg não permetindo executar o script,abra o power shell como adm e digite o seguinte comando Set-ExecutionPolicy Unrestricted e depois s para salvar, volte a pasta do projeto pelo powershell novamente e tente ativar a venv
 10. no caso de seu sistema for windows: gestao-env\Scripts\activate.bat
 11. Se for um mac: source gestao-env/bin/activate
 12. linux:  source gestao-env/bin/activate
